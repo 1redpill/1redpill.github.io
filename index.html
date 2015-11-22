@@ -4,14 +4,14 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>My Resume</title>
 		<style>
-		  
+			
 body {
     display:inline-block;
+    font-family:cursive;
+    font-size:15px;
 }
 #name {
     float:left;
-    font-family:cursive;
-    font-size:15px;
     font-weight:bold;
     color:#FF9966;
 }
@@ -20,11 +20,13 @@ body {
 }
 #email a {
     text-decoration:none;
-    font-family:cursive;
-    font-size:15px;
     color:#FF9966;    
 }
-#email a:hover{
+.right a {
+    text-decoration:none;
+    color: black;
+}
+a:hover{
     color:#CC3333;
     font-weight:bold;
 }
@@ -58,8 +60,6 @@ body {
     margin-left:250px;
 }
 #address p{
-    font-family:cursive;
-    font-size:15px;
     font-weight:bold;
     color:#FF9966;  
 }
@@ -69,20 +69,21 @@ body {
     border:2px solid black;
     border-radius:8px;
     height:400px;
-    width:50px;
+    width:60px;
     background-color: #CC3333;
     margin-top:50px;
     clear:both;
 }
 .right {
     position:relative;
+    float:right;
     border:2px solid black;
     border-radius:8px;
-    height:400px;
-    width:740px;
+    height:360px;
+    width:700px;
     background-color: #FF9966;
     margin-top:50px;
-    margin-left:60px;
+    padding:20px;
 }
     
 		</style>
@@ -95,7 +96,23 @@ body {
 	        </div>
 	    </div>
 	    <div class="left"></div>
-	    <div class="right"></div>
+	    <div class="right">
+	        <h3>Objective</h3>
+	        <p>To take a position as a web developer</p>
+	        <h3>Skills</h3>
+	        <ul>
+	            <li>HTML</li>
+	            <li>CSS</li>
+	            <li>Javascript</li>
+	            <li>Java</li>
+	            <li>C</li>
+	        </ul>
+	        <h3>Education</h3>
+	        <p>Attending Bachelor of Science in</p>
+	        <p>Computer Science at
+	            <a href="https://www.hu-berlin.de/en?set_language=en">"Humbold Universität zu Berlin".</a>
+	        </p>
+	    </div>
 	    <div id="footer">
 	        <div id="address">
 	            <p>Oberfeldstr.132 Berlin Germany</p>
