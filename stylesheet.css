@@ -3,6 +3,10 @@ body {
     font-family:cursive;
     font-size:15px;
 }
+#test {
+    height:100px;
+    width:100px;
+}
 #name {
     float:left;
     font-weight:bold;
