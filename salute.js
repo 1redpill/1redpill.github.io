@@ -6,7 +6,7 @@ var Hello = React.createClass({
     },
 
     handleChange: function(event){
-        if(this.state.value === "\r")
+        if(this.state.value === '\n')
             this.setState({active: true});
         else
             this.setState({value: event.target.value});
