@@ -22,7 +22,8 @@ var Hello = React.createClass({
 
     handleSubmit: function(event){
         this.setState({active: true});
-        document.getElementById(input).innerHTML = event.target.value;
+        document.removeChild(document.getElementByTagName(input));
+        
     },
 
     render: function(){
@@ -30,9 +31,7 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
         <form  onSubmit={this.handleSubmit}>
-        Hello, <div id="input">
-                    <input type="text" value={value} placeholder="your name here" onChange={this.handleChange} disabled={active}/>                    
-               </div>!It is {this.props.date.toTimeString()}
+        Hello, <input type="text" value={value} placeholder="your name here" onChange={this.handleChange} disabled={active}/>!It is {this.props.date.toTimeString()}
         </form>
 	   );
 	   }
