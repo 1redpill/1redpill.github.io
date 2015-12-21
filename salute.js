@@ -8,22 +8,16 @@ var Hello = React.createClass({
     handleChange: function(event){
         var temp = event.target.value;
         console.log("character:" + temp);
- //       var charact = temp.substring(temp.length-1,temp.length);
- //       console.log(charact);
- /*       if(charact === '\n'){
-            console.log("yes!");
-            this.setState({active: true});
-        }
-        else
-            */
-            this.setState({value: event.target.value});
+        this.setState({value: event.target.value});
 
     },
 
     handleSubmit: function(event){
+        var paragraph = document.createElement('p');
+        link.setAttribute('name', event);
+        var txtNode = document.createTextNode(event); 
         this.setState({active: true});
-        document.removeChild(document.getElementByTagName(input));
-        
+        document.getElementById('nameBox').appendChild(event);
     },
 
     render: function(){
@@ -31,7 +25,8 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
         <form  onSubmit={this.handleSubmit}>
-        Hello, <input type="text" value={value} placeholder="your name here" onChange={this.handleChange} disabled={active}/>!It is {this.props.date.toTimeString()}
+            <input type="text" value={value} placeholder="Add your name here" className="inputBox" onChange={this.handleChange} disabled={active}/>
+            It is {this.props.date.toTimeString()}
         </form>
 	   );
 	   }
