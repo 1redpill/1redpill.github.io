@@ -1,20 +1,20 @@
 'use strict';
 var Hello = React.createClass({
     getInitialState: function() {
-        return {value: 'Your name here'};
+        return {value: 'Your name here'
+                active: false};
     },
 
     handleChange: function(event){
         this.setState({value: event.target.value,
-                        disabled: true});
-        console.log(this.props.disabled);
+                        active: event.target.disabled});
     },
 
     render: function(){
     var value = this.state.value;
     return (
     	<p>
-        Hello, <input type="text" value={value} onChange={this.handleChange} disabled={false} />!
+        Hello, <input type="text" value={value} onChange={this.handleChange} disabled={active} />!
         It is {this.props.date.toTimeString()}
       </p>
 	   );
