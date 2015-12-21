@@ -7,6 +7,7 @@ var Hello = React.createClass({
     handleChange: function(event){
         this.setState({value: event.target.value,
                         disabled: true});
+        console.log(disabled);
     },
 
     render: function(){
