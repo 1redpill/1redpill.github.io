@@ -6,7 +6,7 @@ var Hello = React.createClass({
     },
 
     handleChange: function(event){
-        var temp = event.target.value;
+ /*       var temp = event.target.value;
         console.log("character:" + temp);
         var charact = temp.substring(temp.length-1,temp.length);
         console.log(charact);
@@ -16,6 +16,8 @@ var Hello = React.createClass({
         }
         else
             this.setState({value: event.target.value});
+*/
+        this.setState({value: event.target.value, active: true});
     },
 
     render: function(){
@@ -23,7 +25,7 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
     	<p>
-        Hello, <input type="text" value={value} placeholder="your name here" onChange={this.handleChange} disabled={active} />!
+        Hello, <input type="text" value={value} placeholder="your name here" onSubmit={this.handleChange} disabled={active}>!
         It is {this.props.date.toTimeString()}
       </p>
 	   );
