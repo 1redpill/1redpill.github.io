@@ -21,7 +21,7 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
         <form  onSubmit={this.handleSubmit}>
-           Hello, <input type="text" value={value} placeholder="Add your name here" className="inputBox" onChange={this.handleChange} disabled={active}/>!It is {this.props.date.toTimeString()}
+           Hello, <input type="text" value={value} placeholder="Add your name here" className="inputBox" onChange={this.handleChange} disabled={active}/>!  It is {this.props.date.toTimeString()}
         </form>
 	   );
 	   }
