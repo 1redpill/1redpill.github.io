@@ -30,9 +30,9 @@ var Hello = React.createClass({
 	   );
 	   }
 });
-setInterval(function(){
+//setInterval(function(){
     ReactDOM.render(
 	<Hello date={new Date()} />,
 	document.getElementById('test')
 	);
-}, 500);	   
+//}, 500);	   
