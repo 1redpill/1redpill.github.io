@@ -4,7 +4,7 @@ var Hello = React.createClass({
         return {value: 'Your name here'};
     },
 
-    handleChange: function(){
+    handleChange: function(event){
         this.setState({value: event.target.value,
                         disabled: true});
     },
