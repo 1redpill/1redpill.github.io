@@ -7,7 +7,10 @@ var Hello = React.createClass({
 
     handleChange: function(event){
         console.log("character:" + event.target.value);
-        if(event.target.value === '\n'){
+        var temp = event.target.value.split("");
+        var charact = temp.substring(temp.length-1,temp.length);
+        console.log(charact);
+        if(charact === '\n'){
             console.log("yes!");
             this.setState({active: true});
         }
