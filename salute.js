@@ -1,18 +1,14 @@
 'use strict';
 var Hello = React.createClass({
     getInitialState: function() {
-        return {value: 'Your name here',
+        return {value: '',
                 active: false};
     },
 
     handleChange: function(event){
-        console.log("character:" + event.target.value);
-        var temp = event.target.value.split("");
-        var charact;
-        if(temp.length > 1)
-            charact = temp.substring(temp.length-1,temp.length);
-        else
-            charact = temp;
+        var temp = event.target.value;
+        console.log("character:" + temp);
+        var charact = temp.substring(temp.length-1,temp.length);
         console.log(charact);
         if(charact === '\n'){
             console.log("yes!");
@@ -27,7 +23,7 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
     	<p>
-        Hello, <input type="text" value={value} onChange={this.handleChange} disabled={active} />!
+        Hello, <input type="text" value={value} placeholder="your name here" onChange={this.handleChange} disabled={active} />!
         It is {this.props.date.toTimeString()}
       </p>
 	   );
