@@ -8,7 +8,11 @@ var Hello = React.createClass({
     handleChange: function(event){
         console.log("character:" + event.target.value);
         var temp = event.target.value.split("");
-        var charact = temp.substring(temp.length-1,temp.length);
+        var charact;
+        if(temp.length > 1)
+            charact = temp.substring(temp.length-1,temp.length);
+        else
+            charact = temp;
         console.log(charact);
         if(charact === '\n'){
             console.log("yes!");
