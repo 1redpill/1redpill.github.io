@@ -15,7 +15,8 @@ var Hello = React.createClass({
     handleSubmit: function(event){
         var paragraph = document.createElement('p');
         link.setAttribute('name', event);
-        var txtNode = document.createTextNode(event); 
+        var txtNode = document.createTextNode(event);
+        console.log(event.innerHTML);
         this.setState({active: true});
         document.getElementById('nameBox').appendChild(event);
     },
