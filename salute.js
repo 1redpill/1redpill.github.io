@@ -6,7 +6,7 @@ var Hello = React.createClass({
     },
 
     handleChange: function(event){
-        if(this.state.value === 'a'){
+        if(event.target.value === '\n'){
             console.log("yes!");
             this.setState({active: true});
         }
