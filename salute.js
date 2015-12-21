@@ -1,7 +1,7 @@
 'use strict';
 var Hello = React.createClass({
     getInitialState: function() {
-        return {value: 'Your name here'
+        return {value: 'Your name here',
                 active: false};
     },
 
@@ -12,6 +12,7 @@ var Hello = React.createClass({
 
     render: function(){
     var value = this.state.value;
+    var active = this.state.active;
     return (
     	<p>
         Hello, <input type="text" value={value} onChange={this.handleChange} disabled={active} />!
