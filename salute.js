@@ -13,10 +13,7 @@ var Hello = React.createClass({
     },
 
     handleSubmit: function(event){
-        var txtNode = document.createTextNode(event);
-        console.log(txtNode);
         this.setState({active: true});
-        document.getElementById('nameBox').appendChild(txtNode);
     },
 
     render: function(){
@@ -24,15 +21,14 @@ var Hello = React.createClass({
     var active = this.state.active;
     return (
         <form  onSubmit={this.handleSubmit}>
-            <input type="text" value={value} placeholder="Add your name here" className="inputBox" onChange={this.handleChange} disabled={active}/>
-            It is {this.props.date.toTimeString()}
+           Hello, <input type="text" value={value} placeholder="Add your name here" className="inputBox" onChange={this.handleChange} disabled={active}/>!It is {this.props.date.toTimeString()}
         </form>
 	   );
 	   }
 });
-//setInterval(function(){
+setInterval(function(){
     ReactDOM.render(
 	<Hello date={new Date()} />,
 	document.getElementById('test')
 	);
-//}, 500);	   
+}, 500);	   
